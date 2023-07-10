@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "1f067a57-81ef-4882-bde7-78163ba01bbf",
+		"name": "Questions Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24344314"
+	},
+	"item": [
+		{
+			"name": "Question",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body includes qtext\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"qtext\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned from the requested questionnaire\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.questionnaireID).to.eql(pm.variables.get(\"questionnaire_id\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned the requested question\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.qID).to.eql(pm.variables.get(\"question_id\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body includes options\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"options\");\r",
+							"});\r",
+							"\r",
+							"pm.globals.set(\"question_id\", pm.iterationData.get(\"question_id\"));\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/question/:questionnaire_id/:question_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"question",
+						":questionnaire_id",
+						":question_id"
+					],
+					"variable": [
+						{
+							"key": "questionnaire_id",
+							"value": "{{questionnaire_id}}"
+						},
+						{
+							"key": "question_id",
+							"value": "{{question_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "questionnaire_id",
+			"value": "1"
+		}
+	]
+}

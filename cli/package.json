@@ -1,0 +1,30 @@
+{
+  "name": "se2213",
+  "version": "1.0.0",
+  "description": "IntelliQ Command Line Tool",
+  "main": "index.js",
+  "bin": {
+    "se2213": "se2213.js"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntua/SoftEng22-13.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Softeng22-13",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ntua/SoftEng22-13/issues"
+  },
+  "homepage": "https://github.com/ntua/SoftEng22-13#readme",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "chalk": "^5.2.0",
+    "yargs": "13.2"
+  }
+}

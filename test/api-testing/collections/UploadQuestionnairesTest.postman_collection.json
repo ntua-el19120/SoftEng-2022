@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "d8908afe-f9ae-4fda-b9ec-f39a75875859",
+		"name": "Upload Questionnaires Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24344314"
+	},
+	"item": [
+		{
+			"name": "Questionnaire 1 Upload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Response time is less than 500ms', function() {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Sampled data is ok\", function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.status).to.eql(\"OK\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "my_questionnaire",
+							"type": "file",
+							"src": "data-files/example_questionnaire-2.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/admin/questionnaire_upd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"admin",
+						"questionnaire_upd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "my_questionnaire",
+									"type": "file",
+									"src": "data-files/example_questionnaire-2.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9103/intelliq_api/admin/questionnaire_upd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9103",
+							"path": [
+								"intelliq_api",
+								"admin",
+								"questionnaire_upd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-v/Y1JusChTxrQUzPtNAKycooOTA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 15:40:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Questionnaire 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns the specified questionnaire\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.questionnaireID).to.eql('1');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns keywords\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"keywords\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/:questionnaire_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						":questionnaire_id"
+					],
+					"variable": [
+						{
+							"key": "questionnaire_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Questionnaire 2 Upload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Response time is less than 500ms', function() {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Sampled data is ok\", function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.status).to.eql(\"OK\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "my_questionnaire",
+							"type": "file",
+							"src": "data-files/example2_questionnaire.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/admin/questionnaire_upd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"admin",
+						"questionnaire_upd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "my_questionnaire",
+									"type": "file",
+									"src": "data-files/example2_questionnaire.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9103/intelliq_api/admin/questionnaire_upd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9103",
+							"path": [
+								"intelliq_api",
+								"admin",
+								"questionnaire_upd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-v/Y1JusChTxrQUzPtNAKycooOTA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 15:40:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Questionnaire 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns the specified questionnaire\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.questionnaireID).to.eql('2');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns keywords\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"keywords\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/:questionnaire_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						":questionnaire_id"
+					],
+					"variable": [
+						{
+							"key": "questionnaire_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Questionnaire 3 Upload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Response time is less than 500ms', function() {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Sampled data is ok\", function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.status).to.eql(\"OK\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "my_questionnaire",
+							"type": "file",
+							"src": "data-files/example3_questionnaire.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/admin/questionnaire_upd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"admin",
+						"questionnaire_upd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "my_questionnaire",
+									"type": "file",
+									"src": "data-files/example3_questionnaire.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9103/intelliq_api/admin/questionnaire_upd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9103",
+							"path": [
+								"intelliq_api",
+								"admin",
+								"questionnaire_upd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-v/Y1JusChTxrQUzPtNAKycooOTA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 15:40:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Questionnaire 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns the specified questionnaire\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.questionnaireID).to.eql('3');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns keywords\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"keywords\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/:questionnaire_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						":questionnaire_id"
+					],
+					"variable": [
+						{
+							"key": "questionnaire_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

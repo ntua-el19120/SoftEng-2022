@@ -1,0 +1,212 @@
+{
+    "questionnaireID": "1",
+    "questionnaireTitle": "Vacations & Sports",
+    "keywords": [
+        "seasons",
+        "islands",
+        "mountains",
+        "sports"
+    ],
+    "questions": [
+        {
+            "qID": "1",
+            "qtext": "What is your age?",
+            "required": "True",
+            "type": "profile",
+            "options": [
+                {
+                    "opttxt": "<30",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": "30-50",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": "50-70",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": ">70",
+                    "nextqID": "2"
+                }
+            ]
+        },
+        {
+            "qID": "2",
+            "qtext": "When do you prefer to go on vacation?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Autumn",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt":"Winter",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt": "Spring",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt": "Summer",
+                    "nextqID": "3"
+                }
+            ]
+        },
+        {
+            "qID": "3",
+            "qtext": "Do you change your destinations depending on the season?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Yes",
+                    "nextqID": "4"
+                },
+                {
+                    "opttxt": "No",
+                    "nextqID": "8" 
+                }
+            ]
+        },
+        {
+            "qID": "4",
+            "qtext": "Do you prefer to visit islands in the summer and mountains in the winter periods?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Yes",
+                    "nextqID": "5"
+                },
+                {
+                    "opttxt": "No",
+                    "nextqID": "8" 
+                }
+            ]
+        },
+        {
+            "qID": "5",
+            "qtext": "Do you prefer water sports or mountain sports",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Water Sports",
+                    "nextqID": "6"
+                },
+                {
+                    "opttxt": "Mountain Sports",
+                    "nextqID": "7"
+                }
+            ]
+        },
+        {
+            "qID": "6",
+            "qtext": "What is your favorite water sport?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Water Ski",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "Surfing",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "Diving",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "None really I just like water",
+                    "nextqID": "null"
+                }
+            ]
+        },
+        {
+            "qID": "7",
+            "qtext": "What is your favorite Winter sport?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Ski / Snowboard",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "Ice skating",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "None really I just like the cold",
+                    "nextqID": "null"
+                }
+            ]
+        },
+        {
+            "qID": "8",
+            "qtext": "According to your previous answer have you:",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Gone to an island in the winter for vacations",
+                    "nextqID": "9"
+                },
+                {
+                    "opttxt": "Gone to mountain in the summer for vacations",
+                    "nextqID": "9"
+                },
+                {
+                    "opttxt": "None of the above",
+                    "nextqID": "9"
+                }
+            ]
+        },
+        {
+            "qID": "9",
+            "qtext": "Which of these islands would you prefer to visit in the winter?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Corfu",
+                    "nextqID": "10"
+                },
+                {
+                    "opttxt": "Santorini",
+                    "nextqID": "10"
+                },
+                {
+                    "opttxt": "Rhodes",
+                    "nextqID": "10"
+                }
+            ]
+        },
+        {
+            "qID": "10",
+            "qtext": "Which of these mountains would you prefer to visit in the summer?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Parnassos",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "Alpes",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "Pindos",
+                    "nextqID": "null"
+                }
+            ]
+        }
+    ]
+}

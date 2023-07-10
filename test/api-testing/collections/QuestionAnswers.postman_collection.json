@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "3b88a58a-15fe-475f-be0a-0d2c6173844f",
+		"name": "QuestionAnswers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24344314"
+	},
+	"item": [
+		{
+			"name": "Get Question Answers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"q_ans\", pm.iterationData.get(\"q_ans\"));\r",
+							"pm.globals.set(\"question_ans\", pm.iterationData.get(\"question_ans\"));\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns data for the requested questionnaire\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.questionnaireID).to.eql(pm.globals.get(\"q_ans\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns data for the requested question\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.questionID).to.eql(pm.globals.get(\"question_ans\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returns answers list\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"\\\"answers\\\":[\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/getquestionanswers/:questionnaire_id/:question_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"getquestionanswers",
+						":questionnaire_id",
+						":question_id"
+					],
+					"variable": [
+						{
+							"key": "questionnaire_id",
+							"value": "{{q_ans}}"
+						},
+						{
+							"key": "question_id",
+							"value": "{{question_ans}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

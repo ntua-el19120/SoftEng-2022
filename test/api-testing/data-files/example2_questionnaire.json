@@ -1,0 +1,187 @@
+{
+    "questionnaireID": "2",
+    "questionnaireTitle": "PC games and Esports",
+    "keywords": [
+        "gaming",
+        "Faker",
+        "Esports",
+        "player"
+    ],
+    "questions": [
+        {
+            "qID": "1",
+            "qtext": "What is your age?",
+            "required": "True",
+            "type": "profile",
+            "options": [
+                {
+                    "opttxt": "<30",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": "30-50",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": "50-70",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": ">70",
+                    "nextqID": "2"
+                }
+            ]
+        },
+        {
+            "qID": "2",
+            "qtext": "How often do you play your favorite pc game?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Once a week",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt":"3 times a week",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt": "Every day at least 30 minutes",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt": "Rarely, when i have nothing else to do",
+                    "nextqID": "3"
+                }
+            ]
+        },
+        {
+            "qID": "3",
+            "qtext": "What is your favorite type of game?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Rpg",
+                    "nextqID": "4"
+                },
+                {
+                    "opttxt": "First person shooter",
+                    "nextqID": "5" 
+                },
+                {
+                    "opttxt": "PvP",
+                    "nextqID": "6"
+                }
+                
+
+            ]
+        },
+        {
+            "qID": "4",
+            "qtext": "What is your favorite Rpg game?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Guild wars 2",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "World of Warcraft",
+                    "nextqID": "7" 
+                },
+                {
+                    "opttxt": "Baldur's Gate",
+                    "nextqID": "7"
+                }
+            ]
+        },
+        {
+            "qID": "5",
+            "qtext": "What is your favorite FPS game?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Call of duty",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Titan Fall 2",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Hitman",
+                    "nextqID": "7"
+                }
+            ]
+        },
+        {
+            "qID": "6",
+            "qtext": "What is your favorite PvP game?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "League of Legends",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Valorant",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Overwatch",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Dota 2",
+                    "nextqID": "7"
+                }
+            ]
+        },
+        {
+            "qID": "7",
+            "qtext": "Do you enjoy watching Esports of your favorite game?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Yes, I watch frequently my fave Team/Player.",
+                    "nextqID": "8"
+                },
+                {
+                    "opttxt": "Yes,but not so often.",
+                    "nextqID": "8"
+                },
+                {
+                    "opttxt": "No",
+                    "nextqID": "8"
+                },
+                {
+                    "opttxt": "My fave game doesn't host Esport matches",
+                    "nextqID": "8"
+                }
+            ]
+        },
+        {
+            "qID": "8",
+            "qtext": "Do you prefer solo or team gameplay?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Solo",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "team ftw",
+                    "nextqID": "null"
+                }
+            ]
+        }
+        
+    ]
+}

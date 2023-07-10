@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REST API</title>
+<link type="text/css" rel="stylesheet" href="restapi.css">
+<script>
+function copyToClipboard(id) {
+	text = document.getElementById(id).textContent.replace(/\s+/g, " ").trim();;
+	window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+</script>
+</head>
+<body>
+	<header class="company">SoftEng22-13 &nbsp;IntelliQ</header>
+	<div class="container">
+		<div class="toc">
+			<div class="toc-top"></div>
+<div class="item"><a href="Answer_Question.html">Answer Question</a></div>
+<div class="current item">Healthcheck</div>
+<div class="item"><a href="Question.html">Question</a></div>
+<div class="item"><a href="Question_Answers.html">Question Answers</a></div>
+<div class="item"><a href="Questionnaire.html">Questionnaire</a></div>
+<div class="item"><a href="Reset_All.html">Reset All</a></div>
+<div class="item"><a href="Reset_Question.html">Reset Question</a></div>
+<div class="item"><a href="Session_Answers.html">Session Answers</a></div>
+<div class="item"><a href="Upload_Questionnaire.html">Upload Questionnaire</a></div>
+		</div>
+		<div class="main">
+			<div class="background"></div>
+			<div class="content">
+				<header>Healthcheck</header>
+				<div class="basic-info">
+										<div><span>
+<p>
+  &#916;&#953;&#945;&#967;&#949;&#953;&#961;&#953;&#963;&#964;&#953;&#954;&#972; endpoint &#960;&#959;&#965; &#949;&#960;&#953;&#946;&#949;&#946;&#945;&#953;&#974;&#957;&#949;&#953; &#964;&#951; &#963;&#965;&#957;&#948;&#949;&#963;&#953;&#956;&#972;&#964;&#951;&#964;&#945; (end-to-end 
+  connectivity) &#956;&#949;&#964;&#945;&#958;&#973; &#964;&#959;&#965; &#967;&#961;&#942;&#963;&#964;&#951; &#964;&#951;&#962; &#949;&#966;&#945;&#961;&#956;&#959;&#947;&#942;&#962; &#954;&#945;&#953; &#964;&#951;&#962; &#946;&#940;&#963;&#951;&#962; &#948;&#949;&#948;&#959;&#956;&#941;&#957;&#969;&#957;.
+</p>
+</span>
+</div>
+										<div class="title">Resource URL</div>
+					<div>http://localhost:9103/intelliq_api/admin/healthcheck</div>
+
+										</div>
+				</div>
+
+				<div class="sidebar">
+					<div class="code-block">
+						<header>Curl Example</header>
+						<a class="copy" href="javascript:copyToClipboard('curl-example')"></a>
+						<code id='curl-example'>
+						$ curl -X GET
+												"http://localhost:9103/intelliq_api/admin/healthcheck"
+						</code>
+					</div>
+				</div>
+
+				<div class="content">
+					<header class="section">Request</header>
+										<div class="empty-section">No Request Defined</div>
+									</div>
+
+				<div class="sidebar">
+					
+									</div>
+
+				<div class="content">
+																<header class="section">Response
+- Status 500
+</header>
+<div class="description"><span>
+</span>
+</div>
+<div class="image"><img src="img/Healthcheck_500_response.png"></div>
+			<a name="errorDescription"></a>
+<div class="classname">
+	errorDescription
+	</div>
+<div class="attributes">
+	<table>
+		<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+				<tr>
+		<td>status</td><td>
+				String
+				</td><td></td>
+		</tr>
+				<tr>
+		<td>dbconnection</td><td>
+				String
+				</td><td></td>
+		</tr>
+			</table>
+</div>
+												<header class="section">Response
+- Status 200
+</header>
+<div class="description"><span>
+</span>
+</div>
+<div class="image"><img src="img/Healthcheck_200_response.png"></div>
+			<a name="healthcheck"></a>
+<div class="classname">
+	healthcheck
+	</div>
+<div class="attributes">
+	<table>
+		<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+				<tr>
+		<td>status</td><td>
+				String
+				</td><td></td>
+		</tr>
+				<tr>
+		<td>dbconnection</td><td>
+				String
+				</td><td></td>
+		</tr>
+			</table>
+</div>
+										</div>
+
+				<div class="sidebar">
+					
+									</div>
+
+				<div class="content" style="clear:both">
+					<footer class="download">For client development, you can download <a href="xml/Healthcheck.xml" target="_blank">Healthcheck.xml</a></footer>
+					<footer class="powered-by"><a href="http://www.visual-paradigm.com" target="_blank">Powered by Visual Paradigm</a></footer>
+				</div>
+
+				<div style="clear:both"></div>
+		</div>
+	</div>
+</body>
+</html>

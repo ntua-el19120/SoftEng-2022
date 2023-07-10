@@ -1,0 +1,174 @@
+{
+    "questionnaireID": "5",
+    "questionnaireTitle": "Friendship at school",
+    "keywords": [
+        "School",
+        "Friendship",
+        "Friends"
+    ],
+    "questions": [
+        {
+            "qID": "1",
+            "qtext": "What is your sex?",
+            "required": "True",
+            "type": "profile",
+            "options": [
+                {
+                    "opttxt": "Boy",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": "Girl",
+                    "nextqID": "2"
+                },
+                {
+                    "opttxt": "Non binary",
+                    "nextqID": "2"
+                }
+            ]
+        },
+        {
+            "qID": "2",
+            "qtext": "How many good friends do you have in class?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "I have no friends",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt":"I have one good friend",
+                    "nextqID": "3"
+                },
+                {
+                    "opttxt": "I have many good friends",
+                    "nextqID": "3"
+                }
+            ]
+        },
+        {
+            "qID": "3",
+            "qtext": "How often do you stay alone in school breaks?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "I have never stayed alone",
+                    "nextqID": "4"
+                },
+                {
+                    "opttxt": "only a few times",
+                    "nextqID": "4" 
+                },
+                {
+                    "opttxt": "Once a week",
+                    "nextqID": "4"
+                },
+                {
+                    "opttxt": "at least 3 times a week",
+                    "nextqID": "4"
+                }
+                
+
+            ]
+        },
+        {
+            "qID": "4",
+            "qtext": "How often does someone in school behave bad to you?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "I have never had any bad experience at school",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "i only have a few bad experience at school",
+                    "nextqID": "5" 
+                },
+                {
+                    "opttxt": "At least once a week",
+                    "nextqID": "5"
+                }
+            ]
+        },
+        {
+            "qID": "5",
+            "qtext": "In which way have your classmate bully you?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "They have been racist to me",
+                    "nextqID": "6"
+                },
+                {
+                    "opttxt": "I have been physically abused",
+                    "nextqID": "6"
+                },
+                {
+                    "opttxt": "They have threaten me",
+                    "nextqID": "6"
+                },
+                {
+                    "opttxt": "They avoid me",
+                    "nextqID": "6"
+                },
+                {
+                    "opttxt": "They spread rumors about me",
+                    "nextqID": "6"
+                }
+            ]
+        },
+        {
+            "qID": "6",
+            "qtext": "What emotions did you felt at that moment?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "Anger",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Sadness",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Loneliness",
+                    "nextqID": "7"
+                },
+                {
+                    "opttxt": "Wanting revenge",
+                    "nextqID": "7"
+                }
+            ]
+        },
+        {
+            "qID": "7",
+            "qtext": "How do you act when a classmate of your is being bullied?",
+            "required": "True",
+            "type": "question",
+            "options": [
+                {
+                    "opttxt": "I'm trying to help him.",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "Nothing, it is not my business.",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "Nothing, but i feel the guilt that I should help him",
+                    "nextqID": "null"
+                },
+                {
+                    "opttxt": "I laugh",
+                    "nextqID": "null"
+                }
+            ]
+        }
+        
+    ]
+}
